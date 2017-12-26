@@ -1,0 +1,6 @@
+#!/bin/sh -e
+#
+# Wrap Mailman by executing it as the proper user and group
+#
+
+exec sudo -u mailman -g mailman __MAILMAN_PATH__ "$@"

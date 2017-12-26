@@ -1,0 +1,7 @@
+#
+# Sudoers for mailman-wrapper
+#
+
+Cmnd_Alias MAILMAN_WRAPPER=__MAILMAN_PATH__ *
+mailnull ALL=(mailman:mailman) NOPASSWD:MAILMAN_WRAPPER
+Defaults!MAILMAN_WRAPPER !requiretty
